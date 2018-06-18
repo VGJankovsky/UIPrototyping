@@ -14,6 +14,7 @@
 		47DE35A020D817D10078F81C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DE359E20D817D10078F81C /* LaunchScreen.storyboard */; };
 		47DE35AB20D817D10078F81C /* UIPrototypingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE35AA20D817D10078F81C /* UIPrototypingTests.swift */; };
 		47DE35B620D817D10078F81C /* UIPrototypingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE35B520D817D10078F81C /* UIPrototypingUITests.swift */; };
+		47DE35C420D818010078F81C /* PathDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE35C320D818010078F81C /* PathDrawingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		47DE35B120D817D10078F81C /* UIPrototypingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIPrototypingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47DE35B520D817D10078F81C /* UIPrototypingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPrototypingUITests.swift; sourceTree = "<group>"; };
 		47DE35B720D817D10078F81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47DE35C320D818010078F81C /* PathDrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDrawingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				47DE359C20D817D10078F81C /* Assets.xcassets */,
 				47DE359E20D817D10078F81C /* LaunchScreen.storyboard */,
 				47DE35A120D817D10078F81C /* Info.plist */,
+				47DE35C320D818010078F81C /* PathDrawingView.swift */,
 			);
 			path = UIPrototyping;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				47DE359820D817D00078F81C /* ViewController.swift in Sources */,
 				47DE359620D817D00078F81C /* AppDelegate.swift in Sources */,
+				47DE35C420D818010078F81C /* PathDrawingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,65 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIPrototyping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDW-Ov-1Dk" customClass="PathDrawingView" customModule="UIPrototyping" customModuleProvider="target">
+                                <rect key="frame" x="177.5" y="35" width="19" height="332"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start" translatesAutoresizingMaskIntoConstraints="NO" id="FBV-ft-h3U">
+                                        <rect key="frame" x="0.0" y="0.0" width="19" height="19"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="end" translatesAutoresizingMaskIntoConstraints="NO" id="1wB-iA-a8K">
+                                        <rect key="frame" x="4" y="318" width="11" height="14"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="FBV-ft-h3U" firstAttribute="leading" secondItem="HDW-Ov-1Dk" secondAttribute="leading" id="CQ2-es-kjd"/>
+                                    <constraint firstItem="1wB-iA-a8K" firstAttribute="centerX" secondItem="HDW-Ov-1Dk" secondAttribute="centerX" id="Crf-g2-vH8"/>
+                                    <constraint firstAttribute="bottom" secondItem="1wB-iA-a8K" secondAttribute="bottom" id="KVC-Pf-LtJ"/>
+                                    <constraint firstItem="1wB-iA-a8K" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HDW-Ov-1Dk" secondAttribute="leading" id="k2U-N7-Jkt"/>
+                                    <constraint firstItem="FBV-ft-h3U" firstAttribute="centerX" secondItem="HDW-Ov-1Dk" secondAttribute="centerX" id="ri1-h8-ckf"/>
+                                    <constraint firstItem="FBV-ft-h3U" firstAttribute="top" secondItem="HDW-Ov-1Dk" secondAttribute="top" id="rw3-qr-HYv"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="endImageView" destination="1wB-iA-a8K" id="P49-7B-U8F"/>
+                                    <outlet property="startImageView" destination="FBV-ft-h3U" id="hs7-3F-nmc"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkE-dl-6sX">
+                                <rect key="frame" x="171" y="622" width="189" height="30"/>
+                                <state key="normal" title="Toggle path view constraint"/>
+                                <connections>
+                                    <action selector="toggleButtonTouchUpInside" destination="BYZ-38-t0r" eventType="touchUpInside" id="hSt-55-xqn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GkE-dl-6sX" secondAttribute="bottom" constant="15" id="5el-JH-gds"/>
+                            <constraint firstItem="HDW-Ov-1Dk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Ee5-oT-7tO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HDW-Ov-1Dk" secondAttribute="bottom" constant="300" id="Qwb-fx-S5i"/>
+                            <constraint firstItem="HDW-Ov-1Dk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="qH5-tp-Fnl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GkE-dl-6sX" secondAttribute="trailing" constant="15" id="wva-EJ-4Sj"/>
+                            <constraint firstItem="HDW-Ov-1Dk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y0e-ft-wnQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="Qwb-fx-S5i" id="IGk-yB-tVZ"/>
+                        <outlet property="pathDrawingView" destination="HDW-Ov-1Dk" id="HK5-pi-jqp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="end" width="11" height="14"/>
+        <image name="start" width="19" height="19"/>
+    </resources>
 </document>
