@@ -15,6 +15,7 @@
 		47DE35AB20D817D10078F81C /* UIPrototypingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE35AA20D817D10078F81C /* UIPrototypingTests.swift */; };
 		47DE35B620D817D10078F81C /* UIPrototypingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE35B520D817D10078F81C /* UIPrototypingUITests.swift */; };
 		47DE35C420D818010078F81C /* PathDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE35C320D818010078F81C /* PathDrawingView.swift */; };
+		D043532420D8E9840084C9C8 /* GradientTruncatingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D043532320D8E9840084C9C8 /* GradientTruncatingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		47DE35B520D817D10078F81C /* UIPrototypingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPrototypingUITests.swift; sourceTree = "<group>"; };
 		47DE35B720D817D10078F81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47DE35C320D818010078F81C /* PathDrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDrawingView.swift; sourceTree = "<group>"; };
+		D043532320D8E9840084C9C8 /* GradientTruncatingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientTruncatingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		47DE359420D817D00078F81C /* UIPrototyping */ = {
 			isa = PBXGroup;
 			children = (
+				D043532320D8E9840084C9C8 /* GradientTruncatingLabel.swift */,
 				47DE359520D817D00078F81C /* AppDelegate.swift */,
 				47DE359720D817D00078F81C /* ViewController.swift */,
 				47DE359920D817D00078F81C /* Main.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47DE359820D817D00078F81C /* ViewController.swift in Sources */,
+				D043532420D8E9840084C9C8 /* GradientTruncatingLabel.swift in Sources */,
 				47DE359620D817D00078F81C /* AppDelegate.swift in Sources */,
 				47DE35C420D818010078F81C /* PathDrawingView.swift in Sources */,
 			);
