@@ -12,7 +12,10 @@ class GradientTruncatingLabel: UILabel {
     
     struct GradientDirection {
         
-        static let horizontal = GradientDirection(start: CGPoint(x:0, y:0.5), end: CGPoint(x:1, y:0.5))
+        static let leftToRight = GradientDirection(start: CGPoint(x:0, y:0.5), end: CGPoint(x:1, y:0.5))
+        static let rightToLeft = GradientDirection(start: CGPoint(x:1, y:0.5), end: CGPoint(x:0, y:0.5))
+        static let bottomToTop = GradientDirection(start: CGPoint(x:0.5, y:0.0), end: CGPoint(x:0.5, y:1))
+        static let topToBottom = GradientDirection(start: CGPoint(x:0.5, y:1), end: CGPoint(x:0.5, y:0))
         
         let start : CGPoint
         let end : CGPoint
@@ -20,10 +23,17 @@ class GradientTruncatingLabel: UILabel {
     
     static let defaulLocations = [0.7, 0.95]
     static let defaultColors = [UIColor.black, UIColor.clear].map { $0.cgColor }
+    var string: String? { return (attributedText?.string ?? text) }
     
     // MARK: Private properties
     
-    private lazy var gradientLayer = CAGradientLayer()
+    private lazy var maskLayer: CAGradientLayer = {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.locations = self.locations ?? GradientTruncatingLabel.defaulLocations.map { NSNumber(value: $0) }
+        gradientLayer.colors = GradientTruncatingLabel.defaultColors
+        return gradientLayer
+    }()
     
     // MARK: Public properties
     // MARK: Customization
@@ -34,7 +44,6 @@ class GradientTruncatingLabel: UILabel {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        addGradientLayer()
         lineBreakMode = .byClipping
         numberOfLines = 1
     }
@@ -49,26 +58,40 @@ class GradientTruncatingLabel: UILabel {
         truncateIfNeeded()
     }
     
-    private func addGradientLayer(){
-        gradientLayer.frame = bounds
-        gradientLayer.locations = self.locations ?? GradientTruncatingLabel.defaulLocations.map { NSNumber(value: $0) }
-        gradientLayer.isHidden = true
-        gradientLayer.colors = GradientTruncatingLabel.defaultColors
-        applyDirection(direction ?? GradientDirection.horizontal)
-        layer.mask = gradientLayer
-    }
-    
     private func applyDirection(_ direction: GradientDirection){
-        gradientLayer.startPoint = direction.start
-        gradientLayer.endPoint = direction.end
+        maskLayer.startPoint = direction.start
+        maskLayer.endPoint = direction.end
     }
     
     private func truncateIfNeeded(){
-        gradientLayer.isHidden = true
+        layer.mask = nil
         guard let labelText = text else { return }
         let textSize = labelText.size(withAttributes: [NSAttributedStringKey.font: font] )
         guard textSize.width > bounds.width else { return }
-        gradientLayer.frame = bounds
-        gradientLayer.isHidden = false
+        maskLayer.frame = bounds
+        applyDirection(textDirection())
+        layer.mask = maskLayer
+    }
+
+    private func textDirection() -> GradientDirection {
+        guard let languageDirection = string?.languageDirection() else { return .leftToRight }
+        switch languageDirection {
+        case .leftToRight: return .leftToRight
+        case .rightToLeft: return .rightToLeft
+        case .bottomToTop: return .bottomToTop
+        case .topToBottom: return .topToBottom
+        default: return .leftToRight
+        }
+    }
+}
+
+extension String {
+    func languageDirection() -> NSLocale.LanguageDirection
+    {
+        let tagger = NSLinguisticTagger(tagSchemes: [.language], options: 0)
+        tagger.string = self
+        guard let dominantLanguage = tagger.dominantLanguage else { return .leftToRight }
+        
+        return NSLocale.characterDirection(forLanguage: dominantLanguage)
     }
 }

@@ -22,9 +22,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lgU-J8-W8k">
                                 <rect key="frame" x="15" y="170" width="345" height="20.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnm-KE-4RZ" customClass="GradientTruncatingLabel" customModule="UIPrototyping" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ל ישראל יש להם חלק לעולם הבא, שנאמר ועמך כולם צדיקים, לעולם יירשו ארץ, נצר מטעי מעשה ידי " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnm-KE-4RZ" customClass="GradientTruncatingLabel" customModule="UIPrototyping" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
-                                        <string key="text">dasoidjkdsh fjkshf kjhdskj fskdjhf kjshdfk hdskjf sdkh fkdshk fhsdjk fksdhf kjsdhf ksdhfkj sdkjf ksdhf kjsdhf kjhdskj fsdkjh fkjsdh</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -92,18 +91,40 @@
                                     <constraint firstAttribute="width" constant="151" id="Skg-dk-Hug"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15q-mf-XqF" customClass="GradientTruncatingLabel" customModule="UIPrototyping" customModuleProvider="target">
+                                <rect key="frame" x="15" y="210.5" width="345" height="20.5"/>
+                                <string key="text">The United States will impose large sanctions on Turkey for their long time detainment of Pastor Andrew Brunson, a great Christian, family man and wonderful human being. He is suffering greatly. This innocent man of faith should be released immediately!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="to0-PB-Rey" customClass="GradientTruncatingLabel" customModule="UIPrototyping" customModuleProvider="target">
+                                <rect key="frame" x="15" y="251" width="344" height="20.5"/>
+                                <string key="text">図張全図転道光時図質氷甲宰皇著稿会来開。害立阪県月替破諭機変好転平観鮮。持心島今午梅線増達休文転景版経関宙。濱探将出慢処刊玲化目週早住官不。度指午成野周国政開作限治理危。園表短航党夕要上修南読説信言。野投調政宮担商意刊工掛神囲庭。聞負左梨告細臨全用研家高好育。前農山在車問飯去書消本調福当名応減術広。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="Color"/>
                         <constraints>
+                            <constraint firstItem="15q-mf-XqF" firstAttribute="top" secondItem="lgU-J8-W8k" secondAttribute="bottom" constant="20" id="0Yq-zt-c0u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GkE-dl-6sX" secondAttribute="bottom" constant="15" id="5el-JH-gds"/>
                             <constraint firstItem="lgU-J8-W8k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="Crt-pw-Ulq"/>
                             <constraint firstItem="HDW-Ov-1Dk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Ee5-oT-7tO"/>
                             <constraint firstItem="lgU-J8-W8k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HNY-Rl-Z01"/>
+                            <constraint firstItem="to0-PB-Rey" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JX9-Fx-BPT"/>
+                            <constraint firstItem="HNp-bt-jsN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HDW-Ov-1Dk" secondAttribute="trailing" id="L7C-u2-NSC"/>
+                            <constraint firstItem="15q-mf-XqF" firstAttribute="leading" secondItem="qnm-KE-4RZ" secondAttribute="leading" id="Mzy-Tw-PcQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HDW-Ov-1Dk" secondAttribute="bottom" constant="300" id="Qwb-fx-S5i"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HNp-bt-jsN" secondAttribute="trailing" constant="63" id="RiB-VM-PeF"/>
+                            <constraint firstItem="15q-mf-XqF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SNr-je-reb"/>
+                            <constraint firstItem="to0-PB-Rey" firstAttribute="top" secondItem="15q-mf-XqF" secondAttribute="bottom" constant="20" id="Sl4-ha-Rfk"/>
                             <constraint firstItem="GkE-dl-6sX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UBk-9w-187"/>
                             <constraint firstItem="xQh-jW-NgL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="aEX-1c-F81"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xQh-jW-NgL" secondAttribute="bottom" constant="10" id="c3Z-kI-xbh"/>
+                            <constraint firstItem="to0-PB-Rey" firstAttribute="leading" secondItem="qnm-KE-4RZ" secondAttribute="leading" id="cwH-fj-YUa"/>
+                            <constraint firstItem="lgU-J8-W8k" firstAttribute="top" relation="greaterThanOrEqual" secondItem="HNp-bt-jsN" secondAttribute="bottom" id="dxr-S9-NIL"/>
                             <constraint firstItem="lgU-J8-W8k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="ehV-9k-g7t"/>
                             <constraint firstItem="HNp-bt-jsN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="ok7-Wy-0ZF"/>
                             <constraint firstItem="HDW-Ov-1Dk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="qH5-tp-Fnl"/>
