@@ -19,7 +19,7 @@ class GradientTruncatingLabel: UILabel {
     }
     
     static let defaulLocations = [0.7, 0.95]
-    static let defaultColors = [UIColor(white: 1, alpha: 0), UIColor.white].map { $0.cgColor }
+    static let defaultColors = [UIColor(white: 0, alpha: 0), UIColor.black].map { $0.cgColor }
     
     // MARK: Private properties
     
@@ -55,7 +55,7 @@ class GradientTruncatingLabel: UILabel {
         gradientLayer.locations = self.locations ?? GradientTruncatingLabel.defaulLocations.map { NSNumber(value: $0) }
         gradientLayer.isHidden = true
         applyDirection(direction ?? GradientDirection.horizontal)
-        layer.addSublayer(gradientLayer)
+        layer.mask = gradientLayer
     }
     
     private func applyDirection(_ direction: GradientDirection){
@@ -69,21 +69,6 @@ class GradientTruncatingLabel: UILabel {
         let textSize = labelText.size(withAttributes: [NSAttributedStringKey.font: font] )
         guard textSize.width > bounds.width else { return }
         gradientLayer.frame = bounds
-        setupGradientColors()
         gradientLayer.isHidden = false
-    }
-    
-    private func setupGradientColors(){
-        if let customColors = colors {
-            gradientLayer.colors = customColors
-            return
-        }
-        
-        if let superviewBackgroundColor = superview?.backgroundColor {
-            gradientLayer.colors = [superviewBackgroundColor.withAlphaComponent(0), superviewBackgroundColor].map { $0.cgColor }
-            return
-        }
-        
-        gradientLayer.colors = GradientTruncatingLabel.defaulLocations
     }
 }

@@ -15,8 +15,11 @@
 		47DE35AB20D817D10078F81C /* UIPrototypingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE35AA20D817D10078F81C /* UIPrototypingTests.swift */; };
 		47DE35B620D817D10078F81C /* UIPrototypingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE35B520D817D10078F81C /* UIPrototypingUITests.swift */; };
 		47DE35C420D818010078F81C /* PathDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE35C320D818010078F81C /* PathDrawingView.swift */; };
+		D02E125920E66CA200F69BC6 /* NotificationBubbleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02E125820E66CA200F69BC6 /* NotificationBubbleLabel.swift */; };
 		D043532420D8E9840084C9C8 /* GradientTruncatingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D043532320D8E9840084C9C8 /* GradientTruncatingLabel.swift */; };
 		D043532620D8F2880084C9C8 /* AutosizingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D043532520D8F2880084C9C8 /* AutosizingCollectionView.swift */; };
+		D04E8AD020F3511600B9E683 /* ImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04E8ACF20F3511600B9E683 /* ImageRenderer.swift */; };
+		D04E8AD220F3728C00B9E683 /* TextOffsetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04E8AD120F3728C00B9E683 /* TextOffsetButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +54,11 @@
 		47DE35B520D817D10078F81C /* UIPrototypingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPrototypingUITests.swift; sourceTree = "<group>"; };
 		47DE35B720D817D10078F81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47DE35C320D818010078F81C /* PathDrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDrawingView.swift; sourceTree = "<group>"; };
+		D02E125820E66CA200F69BC6 /* NotificationBubbleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBubbleLabel.swift; sourceTree = "<group>"; };
 		D043532320D8E9840084C9C8 /* GradientTruncatingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientTruncatingLabel.swift; sourceTree = "<group>"; };
 		D043532520D8F2880084C9C8 /* AutosizingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosizingCollectionView.swift; sourceTree = "<group>"; };
+		D04E8ACF20F3511600B9E683 /* ImageRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRenderer.swift; sourceTree = "<group>"; };
+		D04E8AD120F3728C00B9E683 /* TextOffsetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextOffsetButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,9 @@
 				47DE35A120D817D10078F81C /* Info.plist */,
 				47DE35C320D818010078F81C /* PathDrawingView.swift */,
 				D043532520D8F2880084C9C8 /* AutosizingCollectionView.swift */,
+				D02E125820E66CA200F69BC6 /* NotificationBubbleLabel.swift */,
+				D04E8ACF20F3511600B9E683 /* ImageRenderer.swift */,
+				D04E8AD120F3728C00B9E683 /* TextOffsetButton.swift */,
 			);
 			path = UIPrototyping;
 			sourceTree = "<group>";
@@ -266,10 +275,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				47DE359820D817D00078F81C /* ViewController.swift in Sources */,
+				D04E8AD220F3728C00B9E683 /* TextOffsetButton.swift in Sources */,
 				D043532420D8E9840084C9C8 /* GradientTruncatingLabel.swift in Sources */,
 				47DE359620D817D00078F81C /* AppDelegate.swift in Sources */,
 				D043532620D8F2880084C9C8 /* AutosizingCollectionView.swift in Sources */,
 				47DE35C420D818010078F81C /* PathDrawingView.swift in Sources */,
+				D02E125920E66CA200F69BC6 /* NotificationBubbleLabel.swift in Sources */,
+				D04E8AD020F3511600B9E683 /* ImageRenderer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

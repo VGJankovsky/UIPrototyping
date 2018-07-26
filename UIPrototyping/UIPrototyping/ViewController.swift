@@ -21,14 +21,18 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     @IBOutlet var pathDrawingView: PathDrawingView!
     @IBOutlet var bottomConstraint: NSLayoutConstraint!
     @IBOutlet var colletionView: UICollectionView!
+    @IBOutlet var notificationsLabel: NotificationBubbleLabel!
+    @IBOutlet var driveButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         colletionView.dataSource = self
         colletionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Identifier")
-        
+        notificationsLabel.setNotificationsCount(300)
         bottomConstraint.constant = BottomLayoutConstraintConstant.high.rawValue
+        driveButton?.imageEdgeInsets.right += 10
+        driveButton?.titleEdgeInsets.left += 10
         
         setUpPathView()
     }

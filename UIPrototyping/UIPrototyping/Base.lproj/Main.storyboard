@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,17 +19,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lgU-J8-W8k">
-                                <rect key="frame" x="15" y="170" width="345" height="452"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lgU-J8-W8k">
+                                <rect key="frame" x="15" y="170" width="345" height="20.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnm-KE-4RZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnm-KE-4RZ" customClass="GradientTruncatingLabel" customModule="UIPrototyping" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
+                                        <string key="text">dasoidjkdsh fjkshf kjhdskj fskdjhf kjshdfk hdskjf sdkh fkdshk fhsdjk fksdhf kjsdhf ksdhfkj sdkjf ksdhf kjsdhf kjhdskj fsdkjh fkjsdh</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="v2R-fe-vzF" customClass="AutosizingCollectionView" customModule="UIPrototyping" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="20.5" width="345" height="431.5"/>
+                                    <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="v2R-fe-vzF" customClass="AutosizingCollectionView" customModule="UIPrototyping" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-170" width="345" height="0.0"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6rd-eA-C3c">
                                             <size key="itemSize" width="50" height="50"/>
@@ -49,7 +51,7 @@
                                     </collectionView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDW-Ov-1Dk" customClass="PathDrawingView" customModule="UIPrototyping" customModuleProvider="target">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDW-Ov-1Dk" customClass="PathDrawingView" customModule="UIPrototyping" customModuleProvider="target">
                                 <rect key="frame" x="177.5" y="35" width="19" height="332"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start" translatesAutoresizingMaskIntoConstraints="NO" id="FBV-ft-h3U">
@@ -76,16 +78,34 @@
                                     <action selector="toggleButtonTouchUpInside" destination="BYZ-38-t0r" eventType="touchUpInside" id="hSt-55-xqn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNp-bt-jsN" customClass="NotificationBubbleLabel" customModule="UIPrototyping" customModuleProvider="target">
+                                <rect key="frame" x="270" y="111" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQh-jW-NgL">
+                                <rect key="frame" x="10" y="608" width="151" height="49"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Elt-7F-UQk"/>
+                                    <constraint firstAttribute="width" constant="151" id="Skg-dk-Hug"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GkE-dl-6sX" secondAttribute="bottom" constant="15" id="5el-JH-gds"/>
                             <constraint firstItem="lgU-J8-W8k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="Crt-pw-Ulq"/>
                             <constraint firstItem="HDW-Ov-1Dk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Ee5-oT-7tO"/>
                             <constraint firstItem="lgU-J8-W8k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HNY-Rl-Z01"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HDW-Ov-1Dk" secondAttribute="bottom" constant="300" id="Qwb-fx-S5i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HNp-bt-jsN" secondAttribute="trailing" constant="63" id="RiB-VM-PeF"/>
                             <constraint firstItem="GkE-dl-6sX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UBk-9w-187"/>
+                            <constraint firstItem="xQh-jW-NgL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="aEX-1c-F81"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xQh-jW-NgL" secondAttribute="bottom" constant="10" id="c3Z-kI-xbh"/>
                             <constraint firstItem="lgU-J8-W8k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="ehV-9k-g7t"/>
+                            <constraint firstItem="HNp-bt-jsN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="ok7-Wy-0ZF"/>
                             <constraint firstItem="HDW-Ov-1Dk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="qH5-tp-Fnl"/>
                             <constraint firstItem="GkE-dl-6sX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lgU-J8-W8k" secondAttribute="bottom" id="rcu-kH-ZtJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GkE-dl-6sX" secondAttribute="trailing" constant="15" id="wva-EJ-4Sj"/>
@@ -97,6 +117,7 @@
                         <outlet property="bottomConstraint" destination="Qwb-fx-S5i" id="IGk-yB-tVZ"/>
                         <outlet property="colletionView" destination="v2R-fe-vzF" id="rQl-p3-JHD"/>
                         <outlet property="endImageView" destination="1wB-iA-a8K" id="VxB-GN-F59"/>
+                        <outlet property="notificationsLabel" destination="HNp-bt-jsN" id="eny-U1-hJ1"/>
                         <outlet property="pathDrawingView" destination="HDW-Ov-1Dk" id="HK5-pi-jqp"/>
                         <outlet property="startImageView" destination="FBV-ft-h3U" id="IWA-0C-2v6"/>
                     </connections>
@@ -108,5 +129,8 @@
     <resources>
         <image name="end" width="11" height="14"/>
         <image name="start" width="19" height="19"/>
+        <namedColor name="Color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
